@@ -75,7 +75,17 @@ public class MainActivity extends AppCompatActivity {
         });
         textInput.setOnClickListener(v -> {
             btnAnim(v);
-            copyFromClipboard();
+            new CountDownTimer(1000, 1000) {
+                @Override
+                public void onFinish() {
+                    copyFromClipboard();
+                }
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+
+                }
+            }.start();
         });
         setupScoreButton(btnFife, 5);
         setupScoreButton(btnFour, 4);

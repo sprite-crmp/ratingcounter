@@ -67,7 +67,7 @@
                 android:background="@drawable/btn_bg"
                 android:fontFamily="@font/maybug"
                 android:gravity="center"
-                android:maxWidth="300dp"
+                android:maxWidth="400dp"
                 android:padding="10dp"
                 android:text="Дополнительная информация"
                 android:textColor="@color/btn_text"
