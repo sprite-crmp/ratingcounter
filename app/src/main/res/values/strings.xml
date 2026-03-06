@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">RatingCounter</string>
-    <string name="title_activity_splash">SplashActivity</string>
+    <string name="app_name">Rating Counter</string>
     <string name="production">Created by\nSpriteLab</string>
 </resources>
