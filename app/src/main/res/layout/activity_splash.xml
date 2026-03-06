@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_window" >
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifSplash"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pen"
+        android:layout_marginBottom="10dp"
+        app:loopCount="1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/maybug"
+        android:gravity="center"
+        android:text="@string/production"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+</FrameLayout>
