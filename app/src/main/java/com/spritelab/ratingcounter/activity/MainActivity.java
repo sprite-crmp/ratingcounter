@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void copyFromClipboard() {
+    private void copyFromClipboard(){
         String text = String.valueOf(textInput.getText());
         if (text.matches("[2-5\\s]+")) {
             new CountDownTimer(1000, 1000) {
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
             ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
             CharSequence pasteData = item.getText();
 
-            if (pasteData != null) {
+            if (pasteData != null && pasteData.toString().matches("[2-5\\s]+")) {
                 String clipboardText = pasteData.toString();
                 parseAndAddGrades(clipboardText);
             } else {
@@ -312,11 +312,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void parseAndAddGrades(String text) {
-        String numbersOnly = text.replaceAll("[^0-9]", "");
+        String numbersOnly = text.replaceAll("[^2-5]", "");
 
         if (numbersOnly.isEmpty()) {
-            Toast.makeText(this, "Скопируйте свои оценки, чтобы вставить их в\" +\n" +
-                    "                        \" калькулятор", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Скопируйте свои оценки, чтобы вставить их в" +
+                    " калькулятор", Toast.LENGTH_SHORT).show();
             return;
         }
 
